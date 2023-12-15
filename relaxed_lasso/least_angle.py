@@ -30,7 +30,7 @@ def _check_copy_and_writeable(array, copy=False):
 def _relassolars_path_residues(X_train, y_train, X_test, y_test,
                                copy=True, method='lasso', verbose=False,
                                fit_intercept=True, normalize=True,
-                               max_iter=500, eps=np.finfo(np.float).eps):
+                               max_iter=500, eps=np.finfo(float).eps):
     """Compute the residues on left-out data for a full LARS path.
 
     Parameters
@@ -146,7 +146,7 @@ def _relassolars_path_residues(X_train, y_train, X_test, y_test,
 
 def relasso_lars_path(X, y, Xy=None, Gram=None, max_iter=500, alpha_min=0,
                       theta_min=1, method='lasso', copy_X=True, verbose=0,
-                      eps=np.finfo(np.float).eps, return_path=True,
+                      eps=np.finfo(float).eps, return_path=True,
                       copy_Gram=True, return_n_iter=False):
     """Compute Relaxed Lasso path using LARS algorithm.
 
@@ -486,7 +486,7 @@ class RelaxedLassoLars(MultiOutputMixin, RegressorMixin, LinearModel):
 
     def __init__(self, alpha=1.0, theta=1.0, fit_intercept=True, verbose=False,
                  normalize=True, precompute='auto', max_iter=500,
-                 eps=np.finfo(np.float).eps, copy_X=True, fit_path=True,
+                 eps=np.finfo(float).eps, copy_X=True, fit_path=True,
                  jitter=None, random_state=None):
         """Create Relaxed Lasso object."""
         self.alpha = alpha
@@ -740,7 +740,7 @@ class RelaxedLassoLarsCV(RelaxedLassoLars):
 
     def __init__(self, fit_intercept=True, verbose=False, max_iter=500,
                  normalize=True, precompute='auto', cv=None,
-                 max_n_alphas=1000, n_jobs=None, eps=np.finfo(np.float).eps,
+                 max_n_alphas=1000, n_jobs=None, eps=np.finfo(float).eps,
                  copy_X=True):
         """Create Relaxed Lasso CV object."""
         self.fit_intercept = fit_intercept
