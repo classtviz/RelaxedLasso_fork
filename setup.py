@@ -16,7 +16,7 @@ URL = ""
 LICENSE = "new BSD"
 DOWNLOAD_URL = ""
 VERSION = __version__
-INSTALL_REQUIRES = ["numpy", "scipy", "scikit-learn", "sklearn", "joblib"]
+INSTALL_REQUIRES = ["numpy", "scipy", "scikit-learn", "joblib"]
 CLASSIFIERS = ["Intended Audience :: Science/Research",
                "Intended Audience :: Developers/Data Scientists",
                "Topic :: Software Development",
